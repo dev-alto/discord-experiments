@@ -1,0 +1,3 @@
+echo Running...
+node deploy-commands.js
+node main.js
