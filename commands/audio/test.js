@@ -56,28 +56,29 @@ module.exports = {
 		}
 		interaction.channel.send(optionsListString)
 		
-		joinVoiceChannel({
-			channelId: inputChannel.id,
-			guildId: inputChannel.guild.id,
-			adapterCreator: inputChannel.guild.voiceAdapterCreator,
-		})
-		const connection = getVoiceConnection(inputChannel.guild.id)
+		let connection = getVoiceConnection(inputChannel.guild.id) 
 
+		if (!connection) {
+			connection = joinVoiceChannel({
+				channelId: inputChannel.id,
+				guildId: inputChannel.guild.id,
+				adapterCreator: inputChannel.guild.voiceAdapterCreator,
+			})
+		}
+	
 		const player = createAudioPlayer({
 			behaviors: {
 				noSubscriber: NoSubscriberBehavior.Pause,
 			},
 		})
+		
 		connection.subscribe(player)
 
-		const responseTrack = createAudioResource(`./assets/audio/received.mp3`, {inlineVolume: true})
+		const responseTrack = createAudioResource(`./assets/audio/received.mp3`)
 		const errorTrack = createAudioResource(`./assets/audio/error.mp3`)
 		const endTrack = createAudioResource(`./assets/audio/end.mp3`)
-		let streamResource;
-
-		responseTrack.volume.setVolume(0.6)
-		player.play(responseTrack)
-		
+		let streamResource
+			
 		player.once(AudioPlayerStatus.Idle, () => {
 
 			if (inputString.search("www.youtu") != -1) {
@@ -105,11 +106,10 @@ module.exports = {
 					return interaction.channel.send(`:stop_sign: Fallback failed. Terminating.`)
 				}
 				interaction.channel.send(`:link: Fallback reached. Continuing.`)
-				streamResource = createAudioResource(foundTrack, {inlineVolume: true})
+				streamResource = createAudioResource(foundTrack)//, {inlineVolume: true})
 				
 			}
-			streamResource.volume.setVolume(0.6)
-
+	
 			try {
 				//const info = await ytdl.getInfo(videoID);
 				player.on('error', error => {
@@ -118,17 +118,20 @@ module.exports = {
 				});
 				player.once(AudioPlayerStatus.Idle, () => {
 					console.log("The track has ended.")
-					//player.play(endTrack)
+					player.play(endTrack)
 				})
 				player.play(streamResource)
-
+	
 			} catch (error) {
-
+	
 				console.log(error)
 				interaction.channel.send(error)
-
+	
 			}
+
 		})
+		
+		player.play(responseTrack)
 
 		await interaction.reply(`✅ Your command was received. Processing...`)
 		

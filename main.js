@@ -19,7 +19,7 @@ const client = new Client({
 		GatewayIntentBits.GuildMessages,
 		GatewayIntentBits.GuildVoiceStates,
 	],
-});
+})
 
 client.commands = new Collection()
 const foldersPath = path.join(__dirname, 'commands')
@@ -44,14 +44,14 @@ for (const folder of commandFolders) {
 
 client.once(Events.ClientReady, (c) => {
 	console.log(`✅ Ready! Logged in as ${c.user.tag}`)
-});
+})
 
 client.on(Events.InteractionCreate, async interaction => {
 	if (!interaction.isChatInputCommand()) return
 
 	const command = client.commands.get(interaction.commandName)
 
-	if (!command) return;
+	if (!command) return
 
 	try {
 		await command.execute(interaction)
@@ -63,6 +63,6 @@ client.on(Events.InteractionCreate, async interaction => {
 			await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: false })
 		}
 	}
-});
+})
 
 client.login(token);
