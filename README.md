@@ -10,7 +10,7 @@ It currenttly serves to be a personal multi-purpose Discord bot, one — however
 
 ### Stable-ish Commands:
 
-Be advised: Currently, all  `/test` prefixed commands interact with the bot's music feature.
+⚠ Be advised: Currently, all  `/test` prefixed commands interact with the bot's music feature.
 
 `/test` - Requests a new audio track sourced either from a YouTube or Spotify URL link, or an internal soundboard track.
 
@@ -35,3 +35,5 @@ Be advised: Currently, all  `/test` prefixed commands interact with the bot's mu
 ### Not-As-Stable Commands:
 
 `/testskip` - Skips the current track. 
+
+`/timer` - Starts/stops an interally tracked timer, starting from the time the command is first used until the command is used again. Returns the delta time in ms.
