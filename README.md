@@ -37,3 +37,5 @@ It currenttly serves to be a personal multi-purpose Discord bot, one — however
 `/testskip` - Skips the current track. 
 
 `/timer` - Starts/stops an interally tracked timer, starting from the time the command is first used until the command is used again. Returns the delta time in ms.
+
+\+ some hidden commands too 👻
