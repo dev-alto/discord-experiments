@@ -21,7 +21,7 @@ Be advised: Currently, all  `/test` prefixed commands interact with the bot's mu
 > Input:
 > - [volume] (required) - The number from 0 to 5 to set the audio player volume to. I recommend 0.5.
 
-`/testqueue` - Displays the bot's neat-looking queue in a packaged message.
+`/testqueue` - Displays the bot's queue in a neat-looking packaged message.
 
 `/testpause` - Pauses the bot's audio player.
 
