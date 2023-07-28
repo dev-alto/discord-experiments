@@ -12,7 +12,7 @@ It currenttly serves to be a personal multi-purpose Discord bot, one — however
 
 ⚠ Be advised: Currently, all  `/test` prefixed commands interact with the bot's music feature.
 
-`/test` - Requests a new audio track sourced either from a YouTube or Spotify URL link, or an internal soundboard track.
+`/test` - Requests a new audio track sourced either from a YouT\*be or Spotify URL link, or an internal soundboard track.
 
 > Input: 
 > - [voice-channel] (required) - The voice channel the bot will join. Note that this field becomes unused once the bot is already connected somewhere.
