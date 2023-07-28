@@ -4,6 +4,8 @@ Hello! This is a work-in-progress web application that serves as one of my side-
 
 It currenttly serves to be a personal multi-purpose Discord bot, one — however, that is feature-unique.
 
+<img src="https://github.com/dev-alto/dev-alto/blob/main/28%20July%20%40%2012-59-26%20AM.png">
+
 ## 📚 Command Directory:
 
 ### Stable-ish Commands:
@@ -33,4 +35,3 @@ Be advised: Currently, all  `/test` prefixed commands interact with the bot's mu
 ### Not-As-Stable Commands:
 
 `/testskip` - Skips the current track. 
-
