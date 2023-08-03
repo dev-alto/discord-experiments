@@ -39,3 +39,9 @@ It currenttly serves to be a personal multi-purpose Discord bot, one — however
 `/timer` - Starts/stops an interally tracked timer, starting from the time the command is first used until the command is used again. Returns the delta time in ms.
 
 \+ some hidden commands too 👻
+
+## 🔎 Xtras
+
+<img src="https://github.com/dev-alto/dev-alto/blob/main/03%20August%20%40%2003-06-42%20AM.png">
+
+This message means my bot is offline. Let me know if you want me to re/start it up.
