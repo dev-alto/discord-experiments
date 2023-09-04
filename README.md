@@ -10,14 +10,16 @@ It currenttly serves to be a personal multi-purpose Discord bot, one — however
 
 ### ✅ Stable-ish Commands:
 
-⚠ Be advised: At this point in development, all  `/test` prefixed commands interact with the bot's audio player feature.
+⚠ **Be advised:** At this point in development, know that all  `/test` prefixed commands interact with the bot's audio player feature.
 
 ⇒ `/test` - Requests a new audio track sourced either from a YouT\*be or Spotify URL link, or an internal soundboard track.
 
 > - [voice-channel] (required) - The voice channel the bot will join. Note that this field is unused if the bot is already connected somewhere.
 > - [link] (required) - The audio source to extract and play, either a URL or the name of an internal soundboard track.
 
-⇒ `/testvolume` - Changes the audio player volume of the bot.
+⇒ `/testvolume` - Changes the bot's internal audio player's global volume(as in the perceived volume for all users).
+
+⚠ **Be advised:** The audio player's track volume is by default initially set to `0.50` when first connecting to a voice channel. Do note that a perceived sound's "loudness" is not on a linear scale, so this is not actually set to be "half as loud". This is actually a user experience feature so that music does not by default drown out other voice channel member's voices and otherwise require users to manually lower their own local volume for the bot. Of course, effectiveness varies by each users's audio setup. Set the volume to `1` to return to the "true  volume" of the track.
 
 > - [volume] (required) - A number from 0 to 5 to set the audio player volume to. I recommend 0.5.
 
@@ -25,7 +27,7 @@ It currenttly serves to be a personal multi-purpose Discord bot, one — however
 
 ⇒ `/testpause` - Pauses the bot's audio player.
 
-⇒ `/snipe` - Fun command; utilizes image manipulation tech.
+⇒ `/snipe` - Fun command; utilizes image manipulation from sharp.
 
 > - [user-mention] (required) - The tango.
 
@@ -33,7 +35,7 @@ It currenttly serves to be a personal multi-purpose Discord bot, one — however
 
 ⇒ `/testskip` - Skips the current track. (Future plans to allow skipping to a specific index in the queue)
 
-⇒ `/timer` - The bot starts/stops an interal stopwatch timer, starting from the time the command is first used until the command is called again, then returning the delta time in ms. For debugging.
+⇒ `/timer` - The bot starts/stops an interal stopwatch timer, starting from the time the command is first used until the command is called again, then returning the delta time in ms. For debugging timing and latency.
 
 ### plus some other hidden commands too 👻
 
