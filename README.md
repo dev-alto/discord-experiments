@@ -12,16 +12,16 @@ It currenttly serves to be a personal multi-purpose Discord bot, one — however
 
 ⚠ **Be advised:** At this point in development, know that all  `/test` prefixed commands interact with the bot's audio player feature.
 
-⇒ `/test` - Requests a new audio track sourced either from a YouT\*be or Spotify URL link, or an internal soundboard track.
+⇒ `/test` - Requests a new audio track sourced either from a YouT\*be or Spotify URI link, or an internal soundboard track.
 
 > - [voice-channel] (required) - The voice channel the bot will join. Note that this field is unused if the bot is already connected somewhere.
 > - [link] (required) - The audio source to extract and play, either a URL or the name of an internal soundboard track.
 
 ⇒ `/testvolume` - Changes the bot's internal audio player's global volume(as in the perceived volume for all users).
 
-⚠ **Be advised:** The audio player's track volume is by default initially set to `0.50` when first connecting to a voice channel. Do note that a perceived sound's "loudness" is not on a linear scale, so this is not actually set to be "half as loud". This is actually a user experience feature so that music does not by default drown out other voice channel member's voices and otherwise require users to manually lower their own local volume for the bot. Of course, effectiveness varies by each users's audio setup. Set the volume to `1` to return to the "true  volume" of the track.
+> - [volume] (required) - A number from 0 to 5 to set the audio player volume to. I recommend 0.50.
 
-> - [volume] (required) - A number from 0 to 5 to set the audio player volume to. I recommend 0.5.
+⚠ **Be advised:** The audio player's track volume is by default initially set to `0.50` when first connecting to a voice channel. Do note that a perceived sound's "loudness" is not on a linear scale, so this is not actually set to be "half as loud". This is actually a user experience feature so that music does not by default drown out other voice channel member's voices and otherwise require users to manually lower their own local volume for the bot. Of course, effectiveness varies by each users's audio setup. Set the volume to `1` to return to the "true  volume" of the track.
 
 ⇒ `/testqueue` - Displays the bot's queue in a neat-looking packaged message.
 
