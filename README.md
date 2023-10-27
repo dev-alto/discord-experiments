@@ -21,13 +21,15 @@ It currenttly serves to be a personal multi-purpose Discord bot, one — however
 
 > - [volume] (required) - A number from 0 to 5 to set the audio player volume to. I recommend 0.50.
 
-⚠ **Be advised:** The audio player's track volume is by default initially set to `0.50` when first connecting to a voice channel. Do note that a perceived sound's "loudness" is not on a linear scale, so this is not actually set to be "half as loud". This is actually a user experience feature so that music does not by default drown out other voice channel member's voices and otherwise require users to manually lower their own local volume for the bot. Of course, effectiveness varies by each users's audio setup. Set the volume to `1` to return to the "true  volume" of the track.
+⚠ **Be advised:** The audio player's track volume is by default initially set to `0.50` when first connecting to a voice channel. Do note that a perceived sound's "loudness" is not on a linear scale, so this is not "half as loud". This is actually a user experience feature so that music does not by default drown out other voice channel member's voices and otherwise require users to manually lower their own local volume for the bot. Of course, effectiveness varies by each users's audio setup. Set the volume to `1` to return to the "default volume" of the tracks for the player.
 
 ⇒ `/testqueue` - Displays the bot's queue in a neat-looking packaged message.
 
 ⇒ `/testpause` - Pauses the bot's audio player.
 
 ⇒ `/snipe` - Fun command; utilizes image manipulation from sharp.
+
+⇒ `/ping` - Standard internal utility command. Tests the connection and latency between the bot and Discord's servers.
 
 > - [user-mention] (required) - The tango.
 
