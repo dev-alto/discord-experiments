@@ -1,4 +1,4 @@
-🤖 discord-experiments
+# 🤖 discord-experiments
 
 Hello! This is a work-in-progress web application that serves as one of my many side-projects. 
 
